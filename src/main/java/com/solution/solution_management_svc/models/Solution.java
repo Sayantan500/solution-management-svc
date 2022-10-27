@@ -27,4 +27,12 @@ public class Solution
     public Timestamp getPostedOn() {
         return postedOn;
     }
+
+    public String getSolution() {
+        return solution;
+    }
+
+    public String getProvidedToIssue() {
+        return providedToIssue;
+    }
 }
