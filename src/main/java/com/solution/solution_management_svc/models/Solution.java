@@ -1,14 +1,15 @@
 package com.solution.solution_management_svc.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.google.cloud.Timestamp;
+
+import java.util.Date;
 
 public class Solution
 {
     @JsonProperty("_id")        private String _id;
     @JsonProperty("solution")   private String solution;
     @JsonProperty("issue_id")   private String providedToIssue;
-    @JsonProperty("posted_on")  private Timestamp postedOn;
+    @JsonProperty("posted_on")  private long postedOn;
 
     public Solution(){}
 
@@ -21,10 +22,10 @@ public class Solution
     }
 
     public void setPostedOn() {
-        this.postedOn = Timestamp.now();
+        this.postedOn = new Date().getTime();
     }
 
-    public Timestamp getPostedOn() {
+    public long getPostedOn() {
         return postedOn;
     }
 
